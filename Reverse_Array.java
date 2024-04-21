@@ -1,32 +1,51 @@
-package Lec7;
-
+package Array;
+import java.util.*;
 public class Reverse_Array {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		int [] arr= {2,4,5,1,7,9};
+//		Scanner sc = new Scanner(System.in);
+//		int [] arr = new int [5];
+//		for(int i=0;i<arr.length;i++)
+//		{
+//			arr[i]=sc.nextInt();
+//		}
+		int []arr = {6,4,3,2,1};
 		Reverse(arr);
-		
-		for(int i=0; i<arr.length ;i++)
-		{
-			System.out.print(arr[i]+" ");
-		}
-		
+		Display(arr);
 	}
-	public static void Reverse(int [] arr)
+	
+	public static void Reverse(int []arr)
 	{
-		int i=0;
-		int j=arr.length-1;
+		int lo = 0;
+		int hi = arr.length-1;
 		
-		while(i<j)
+		while(lo<hi)
 		{
-			int k=arr[i];
-			arr[i]=arr[j];
-			arr[j]=k;
-			i++;
-			j--;
+			int temp = arr[lo];
+			arr[lo] = arr[hi];
+			arr[hi] = temp;
+			lo++;
+			hi--;
 		}
-
 	}
+	
+//	public static int [] Reverse(int []arr)
+//	{
+//		int [] lelo = new int[arr.length];
+//		int j=0;
+//		for(int i = arr.length-1 ; i>=0 ; i--)
+//		{
+//			lelo[j++]=arr[i];
+//		}
+//		return lelo;
+//	}
+	public static void Display(int []arr)
+	{
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.println(arr[i] + " ");
+		}
+	}
+
 }

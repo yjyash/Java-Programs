@@ -1,23 +1,21 @@
 package Recursion;
 
-public class coin_toss {
+public class factorial_tail_recursion {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int n=3;
-		toss(n,"");
+		int n=4;
+		fac(n,1);
 	}
-	
-	public static void toss(int n,String ans)
+	public static void fac(int n,int ans)
 	{
 		if(n==0)
 		{
 			System.out.println(ans);
-			return; 
+			return;
 		}
-		toss(n-1,ans+"H");
-		toss(n-1,ans+"T");
+		fac(n-1,ans*n);
 	}
 
 }

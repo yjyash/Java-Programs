@@ -1,4 +1,4 @@
-package Lec22;
+package Recursion;
 
 public class power {
 
@@ -6,18 +6,27 @@ public class power {
 		// TODO Auto-generated method stub
 
 		int a=3;
-		int n=4;
-		System.out.println(pow(3,4));
-	}
-	
-	public static int pow(int a,int n)
-	{
-		if(n==0) {
-			return 1;
-		}
-		int sp= pow(a,n-1);
-		
-		return sp*a;
+		int b=3;
+		pow(a,b,1);
 	}
 
+//	public static int pow(int a,int b)
+//	{
+//		if(b==0)
+//		{
+//			return 1;
+//		}
+//		int sp = pow(a,b-1);
+//		return sp*a;
+//	}
+	
+	public static void pow(int a,int b,int ans) {
+		
+		if(b==0)
+		{
+			System.out.println(ans);
+			return;
+		}
+		pow(a,b-1,ans*a);
+	}
 }
